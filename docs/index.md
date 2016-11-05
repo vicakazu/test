@@ -1,9 +1,9 @@
-<a href="https://www.ambisafe.co/">![test](img/logo_red.png)</a>
+<a href="https://cryptocarbon.co.uk/">![test](img/logo_red.png)</a>
 **********
 
 # About ETokenD
 
-Drop-in replacement for bitcoind JSON-RPC which proxies to the [eToken API](https://github.com/Ambisafe/etoken-docs)
+Drop-in replacement for bitcoind JSON-RPC which proxies to the [eToken API](https://github.com/cryptocarbon/cryptocarbon/wiki/eToken-API)
 
 # Summary
 ETokenD is a NodeJS package which operates a bitcoind-compatible JSON-RPC API. For wallet-related API calls, ETokenD speaks on the back-end to the
@@ -51,14 +51,14 @@ Optional arguments:
                         0x9ce63a4e69de34844e340fc541d82db9506287bc (default)]
   --asset ASSET         ICAP asset code [asset EXM (default)]
   --institution INSTITUTION
-                        ICAP instituion to use [institution AMBI (default)]
+                        ICAP instituion to use [institution CryptoCarbon (default)]
   --privatekey PRIVATEKEY
                         Hex representation of private key to sign 
                         transactions [privateKeyHex], mandatory for sends
   --transactionshistory TRANSACTIONSHISTORY
                         Use transactions history service [off prod stage 
                         (default)]
-  --gethnode GETHNODE   geth node to talk to [https://node.ambisafe.co 
+  --gethnode GETHNODE   geth node to talk to [https://node.cryptocarbon.co.uk
                         (default)]
   --rpcbind RPCBIND     Bind to given address to listen for JSON-RPC 
                         connections (default: localhost)
@@ -71,11 +71,11 @@ Optional arguments:
 
 ```
 
-Running ETokenD with no command line args should start the server, using EXMPL asset contract of eToken's test environment at [0x3fce483a0236ba36869e4e82151006045e7d3331](https://github.com/Ambisafe/etoken-docs/wiki/Integration-Instance). To do much of anything useful, you will also need to tell ETokenD which private key to use, and make sure corresponding address is registered in the eToken ICAP registry.
+Running ETokenD with no command line args should start the server, using EXMPL asset contract of eToken's test environment at [0x3fce483a0236ba36869e4e82151006045e7d3331](https://github.com/cryptocarbon/cryptocarbon/wiki/eToken-API). To do much of anything useful, you will also need to tell ETokenD which private key to use, and make sure corresponding address is registered in the eToken ICAP registry.
 
 ```
 $ ./bin/etokend
-Private key is not specified or invalid. Will use AMBI address as receive for demo purposes. You will not be able to do sends!
+Private key is not specified or invalid. Will use CC address as receive for demo purposes. You will not be able to do sends!
 Current block: 1882819
 eToken contract address 0x3fce483a0236ba36869e4e82151006045e7d3331
 RegistryICAP contract address 0x98a715181466035e10ea4b7da5635a356b1d1c4d
@@ -134,7 +134,7 @@ config file options, or the corresponding command line flags.
 
 ```
 $ bitcoin-cli -rpcport=18545 getnewaddress
-XE58EXMAMBIOG08GBWB3
+XE58EXMCCIOG08GBWB3
 
 $ bitcoin-cli -rpcport=18545 getrawchangeaddress
 0x1Ff21eCa1c3ba96ed53783aB9C92FfbF77862584
